@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>作业1(绝对定位布局)</title>
+    <style>
+	.container {
+	    position: relative;
+	}
+	.main {
+	    height: 200px;
+	    margin: 0 120px;
+	    background-color: yellow;
+	}
+	.left {
+	    position: absolute;
+	    width: 100px;
+	    height: 200px;
+	    left: 0;
+	    top: 0;
+	    background-color: red;
+	}
+	.right {
+	    position: absolute;
+	    width: 100px;
+	    height: 200px;
+	    background-color: blue;
+        right: 0;
+	    top: 0;
+	}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="main"></div>
+        <div class="right"></div>
+        </div>
+    </body>
+	<div class="bottom">
+		<a href="index.html">流式布局</a>
+		<a href="4.html">flex布局</a>
+		<a href="5.html">table布局</a>
+		<a href="6.html">绝对定位</a>
+		<a href="7.html">计算定位</a>
+	</div>
+</body>
+
+</html>

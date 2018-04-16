@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=" utf-8">
+    <title>拖拽效果</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        #box {
+            width: 500px;
+            height: 200px;
+            background: #3083fb;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #drag {
+            /* border-radius: 50px; */
+            width: 50px;
+            height: 20px;
+            background: white;
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var obox = document.getElementById("box");
+            var odrag = document.getElementById("drag");
+            var isDrag = false;
+            var x, y;
+
+            odrag.onmousedown = down;
+            document.onmousemove = move;
+            document.onmouseup = up;
+
+            function down(ev) {
+                var ev = window.event || ev;
+                x = ev.clientX - this.offsetLeft;
+                y = ev.clientY - this.offsetTop;
+                isDrag = true;
+            }
+            function move(ev) {
+                if (isDrag) {
+                    var ev = window.event || ev;
+                    odrag.style.left = (ev.clientX - x) + "px";
+                    odrag.style.top = (ev.clientY - x) + "px";
+                    if (parseInt(odrag.style.left) < 0) {
+                        odrag.style.left = 0;
+                    }
+                    if (parseInt(odrag.style.top) < 0) {
+                        odrag.style.top = 0;
+                    }
+                    if (parseInt(odrag.style.left) > obox.clientWidth - odrag.clientWidth) {
+                        odrag.style.left = (obox.clientWidth - odrag.clientWidth) + "px";
+                    }
+                    if (parseInt(odrag.style.top) > obox.clientHeight - odrag.clientHeight) {
+                        odrag.style.top = (obox.clientHeight - odrag.clientHeight) + "px";
+                    }
+                }
+            }
+            function up() {
+                isDrag = false;
+                odrag.style.cursor = "pointer";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <div id="drag">123123</div>
+    </div>
+</body>
+
+</html>

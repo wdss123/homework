@@ -1,0 +1,57 @@
+* {margin:  0; padding: 0}
+body{
+    background:#567;
+  }
+#main {
+    width:400px;
+    margin:0 auto;
+    margin-top:8px;
+    margin-bottom:2%;
+    transition:opacity 1s;
+    -webkit-transition:opacity 1s;
+}
+#main h1{
+    background: #3083fb;
+    padding:20px 0;
+    font-size:140%;
+    font-weight:300;
+    text-align:center;
+    color:#fff;
+}
+form{
+    background:#f0f0f0;
+    padding:6% 4%;
+  }
+input {
+    width: 200px;
+    height: 28px;
+    margin: 0 0 5px 15px;
+}
+.must {
+    color: red
+}
+.sex {
+    width: 12px;
+    vertical-align: middle;
+}
+.hobby {
+    width: 12px;
+    vertical-align: middle;
+}
+.text {
+    margin-top: 20px;
+}
+.text span {
+    margin-right: 5px;
+}
+.btn-submit {
+    display: block;
+    background-color: #3083fb;
+    color: white;
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+}
+.btn-submit:hover {
+    opacity: 0.8;
+}

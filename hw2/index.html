@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css的form表单</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="main">
+        <h1>用户信息</h1>
+        <form>
+                <div><span class="must">*</span><label>昵称</label><input type="name" placeholder="请输入昵称" autofocus="autofocus" required /></div>
+                <div><span class="must">*</span><label>邮箱</label><input type="email" placeholder="请输入邮箱" required /></div>
+                <div>
+                    <span>性别：</span>
+                    <input type="radio" name="sex" class="sex" checked/>
+                    <span>男</span>
+                    <input type="radio" name="sex" class="sex" />
+                    <span>女</span></div>
+                <div>
+                    <span>爱好: </span>  
+                    <label><input name="hobby" type="checkbox" value="" class="hobby" />电脑 </label> 
+                    <label><input name="hobby" type="checkbox" value="" class="hobby" />音乐 </label> 
+                    <label><input name="hobby" type="checkbox" value="" class="hobby" />运动 </label>
+                </div>
+                <div>
+                    <span>城市：</span>
+                    <select>
+                        <option value="1">请选择</option>
+                        <option value="2">北京</option>
+                        <option value="3">上海</option>
+                    </select>
+                </div>
+                <div class="text">
+                    <span>简介: </span>
+                    <textarea id="" cols="30" rows="5" placeholder="请输入简介(最多200字)" maxlength="200"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">提交</button>   
+        </form>
+    </div>
+</body>
+</html>
