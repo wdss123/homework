@@ -2,7 +2,12 @@ const Koa = require('koa');
 const cors = require('koa2-cors');
 const app = new Koa();
 const puppeteer = require('puppeteer');
+const EventEmitter = require('events');
+const myEmitter = new EventEmitter();
+// 解决超过监听数的warning
+myEmitter.setMaxListeners(0);
 
+// 跨域问题解决 
 app.use(cors({
     origin: '*'
 }));
