@@ -1,0 +1,20 @@
+body {
+    background-color: #F1F1F1;
+}
+#main {
+    width: 720px;
+    height: 880px;
+    margin: 0 auto;
+
+}
+.box {
+    overflow: hidden; 
+    background: url('../img/table.jpg'); 
+}
+.img-style {
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin: 10px 20px 20px 20px;
+    float: left;
+}

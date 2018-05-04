@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对对碰小游戏</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="main">
+        <div class="box">
+            <img :src="item.click? item.src1 : item.src2" alt="" class="img-style" @click="change(index)" v-for="(item, index) in list" :disabled="item.show">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
